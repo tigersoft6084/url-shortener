@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        API_URL: "http://localhost:8000"
+    volumes:
+      - ./.ignore:/data
+    ports:
+      - "8000:8000"
+    environment:
+      - API_PORT=8000
+      - URL_DATA_FILE=/data/urls.json

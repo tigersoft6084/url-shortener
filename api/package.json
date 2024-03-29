@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "esbuild src/index.ts --platform=node --bundle --minify --outfile=build/index.js",
+    "dev": "nodemon src/index.ts --ignore 'urlData.json'",
+    "test": "jest",
+    "format": "prettier --write 'src/**/*.{js,ts,tsx,json,css,md}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.25",
+    "@types/supertest": "^6.0.2",
+    "esbuild": "^0.20.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
